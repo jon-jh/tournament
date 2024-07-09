@@ -12,7 +12,9 @@ const connect = function() {
   //event handler
   conn.on('connect', () => {
     console.log('connected to the multiplayer snek game');
-    conn.write('Name: GUY');
+    conn.write('Name: GUY')
+    // testing to send up command non stop
+    setInterval(() => conn.write('Move: up'), 1000)
   });
   conn.on('data', (anyData) => {
     console.log('message:', anyData);
