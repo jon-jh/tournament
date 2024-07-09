@@ -12,6 +12,7 @@ const connect = function() {
   //event handler
   conn.on('connect', () => {
     console.log('connected to the multiplayer snek game');
+    conn.write('Name: GUY');
   });
   conn.on('data', (anyData) => {
     console.log('message:', anyData);
