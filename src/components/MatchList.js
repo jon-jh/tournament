@@ -2,16 +2,18 @@
 import Match from "./Match"
 import matchData from "../data/matchData";
 
-function MatchList() {
+function MatchList(props) {
+
+  const oneMatch = matchData[0]
+
   return (
 
     <section className="PlayerList MatchList">
       <h1>Match list</h1>
 
       {/* matches go here */}
-
-      <Match />
-    </section>
+      <Match players = {oneMatch.players} winner = {oneMatch.winner} scoreDiff = {oneMatch.scoreDifference}/>
+      </section>
 
   )
 }
